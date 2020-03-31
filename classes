@@ -4,22 +4,23 @@ Understanding Inheritance and Composition
 Inheritance:
 Classes, which can be applied to other objects which will share traits of that class. Which can be added on further.
 The system starts off very general, then branches off into much more specific definitions.
+
 e.g:
 class Animal:
   //sleeping
   //eating
   
 class Mammal:
-  Animal()
+  Animal();
   //give live birth
   
 class Bird:
-  Animal()
+  Animal();
   //lay eggs
   //fly
   
 Rabbit:
-  Mammal()
+  Mammal();
   //burrowing
 
 Penguin:
@@ -27,19 +28,56 @@ Penguin:
   //insert special features
 ########################################################################################################################################
 Composition:
-Split classes up, so each impliments a behaviour.
+Split classes up, so each implements a behaviour.
+
 e.g:
 class behaviours {
-   class swim
-   class walk
-   class fly
-   class giveBirth
-   class eat
+   class swim;
+   class walk;
+   class fly;
+   class giveBirth;
+   class eat;
 }
  
 class rabbit {
-   walk()
-   giveBirth()
-   eat()
+   walk();
+   giveBirth();
+   eat();
 }
+########################################################################################################################################
+Practical Use
+########################################################################################################################################
+Classes are behavioural components.
+These classes must derive from Unity's MonoBehaviour.
+
+e.g:
+//this method is called whenever your game starts
+void Start() {
+}
+//this method is called every frame
+void Update() {
+}
+Typically classes derive from MonoBehaviour. So it'll look like:
+
+class Enemy:MonoBehaviour{
+  void Update() {
+    bool canSeePlayer = false;
+    //set canSeePlayer to true when Enemy can see Player at a certain distance
+    if (canSeePlayer) {
+      //attack player
+    }
+  }
+}
+
+each enemy will have their own copy of this. but their values can be independant. 
+i.e: one enemy can see player but the other can't.
+########################################################################################################################################
+Static Classes
+########################################################################################################################################
+Static means that the variable *belongs to the class* and not the object itself.
+All variables and methods in a static class must be static as well.
+
+Static classes are best used similarly to python functions.
+You can call it on other scripts whenever you want as a reference.
+For example, define a static class that performs maths. You call it on the other script.
 ########################################################################################################################################
