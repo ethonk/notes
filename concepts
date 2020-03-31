@@ -1,0 +1,45 @@
+########################################################################################################################################
+Understanding Inheritance and Composition
+########################################################################################################################################
+Inheritance:
+Classes, which can be applied to other objects which will share traits of that class. Which can be added on further.
+The system starts off very general, then branches off into much more specific definitions.
+e.g:
+class Animal:
+  //sleeping
+  //eating
+  
+class Mammal:
+  Animal()
+  //give live birth
+  
+class Bird:
+  Animal()
+  //lay eggs
+  //fly
+  
+Rabbit:
+  Mammal()
+  //burrowing
+
+Penguin:
+  Bird()
+  //insert special features
+########################################################################################################################################
+Composition:
+Split classes up, so each impliments a behaviour.
+e.g:
+class behaviours {
+   class swim
+   class walk
+   class fly
+   class giveBirth
+   class eat
+}
+ 
+class rabbit {
+   walk()
+   giveBirth()
+   eat()
+}
+########################################################################################################################################
