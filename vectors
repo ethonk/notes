@@ -1,0 +1,32 @@
+############################
+Vector Structures
+############################
+
+Vectors are a mathematical object that include both direction and magnitude.
+Vector Structures are used to store positions, velocities and directions.
+############################
+3 Dimensional space (xyz is Vector3.)
+e.g:
+new Vector3(x,y,z);
+
+2 Dimensional space (xy is Vector2.)
+e.g:
+new Vector2(x,y);
+############################
+You find the magnitude by using Pythagoras.
+m = sqrt|a^2+b^2
+
+############################
+Normalized Vectors
+############################
+Normalized Vectors are vectors used to ensure that a player doesn't gain extra
+distance because of a faster speed.
+We have to normalize the vector to calculate direction.
+To do this, you divide the x and y values by magnitude.
+e.g:
+x/m, y/m = (normalized)
+
+Significance is when calculating magnitude of this vector(x_new and y_new) it will
+always equal to 1.
+**if you want to treat a vector as a direction, always normalize it first**
+
